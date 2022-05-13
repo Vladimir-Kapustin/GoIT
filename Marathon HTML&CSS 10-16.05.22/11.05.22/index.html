@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>title (можно менять прямо в коде - сервер отобразит. Побуквенно....)</h1>
+
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+    
+    <ul id="list">
+        <li>element one</li>
+        <li>element two</li>
+        <li>element three</li>
+        <li>element four</li>
+    </ul>
+
+    <button id="btn">CLICK ME</button>
+
+    <script>
+
+        // здесь логика, чтоб от джаваскрипта не исчезали изменения, а отображались на странице - изменения, создаваемые им самим. в видео Файв-Сервера всё работает, а здесь - нет...
+        const list = document.getElementById('list')
+
+        const addElement = ()=>{
+            const li = document.createElement('li')
+            li.innerHTML = 'element five'
+            list.appendChild(li)
+        }
+
+        const btn = document.getElementById('btn')
+        btn.addEventListener('click', ()=>{
+            addElement()
+        })
+
+        window.addEventListener('load', ()=>{
+          addElement()
+        })
+   
+    </script>
+</body>
+</html>
