@@ -7,6 +7,12 @@ body {
 	display: flex;
 	flex-direction: row-reverse;
 	background-color: #F5F7FA;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.main-content {
+	background-color: #FFFFFF;
 }
 
 /* about styles */
@@ -52,4 +58,10 @@ body {
 
 .education {
 	background-color: darkblue;
+}
+
+/* sidebar styles */
+
+.sidebar {
+	background-color: #1E2939;
 }
